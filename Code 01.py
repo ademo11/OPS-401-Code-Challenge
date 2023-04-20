@@ -1,8 +1,8 @@
 # !/usr/bin/env python3
-# Script: OPS 301 Class 02 Ops Challenge Solution
+# Script: OPS 401 Class 02 Ops Challenge Solution
 # Author: Ademola
 # Date of latest revision: 18 April 2023
-# Purpose: Import libraries
+# Purpose: Ops Challenge: Uptime Sensor Tool Part 1 of 2
 
 
 # Transmit a single ICMP (ping) packet to a specific IP every two seconds.
