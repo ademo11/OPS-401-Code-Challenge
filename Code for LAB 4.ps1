@@ -31,3 +31,6 @@ foreach ($bucket in $s3Buckets) {
 }
 
 Write-Host "Configuration complete."
+
+# Reference
+# OpenAI
