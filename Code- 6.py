@@ -14,7 +14,6 @@
 # If mode 1 or 2 are selected, prompt the user to provide a filepath to a target file.
 # If mode 3 or 4 are selected, prompt the user to provide a cleartext string.
 # Depending on the selection, perform one of the below functions. You’ll need to create four functions:
-
 # Encrypt the target file if in mode 1.
 # Delete the existing target file and replace it entirely with the encrypted version.
 # Decrypt the target file if in mode 2.
