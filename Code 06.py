@@ -1,10 +1,10 @@
 # # !/usr/bin/env python3
 # # Script: OPS 401 Class 02 Ops Challenge Solution
 # # Author: Ademola
-# # Date of latest revision: 24 April 2023
+# # Date of latest revision: 25 April 2023
 # # Purpose: Ops Challenge: File Encryption Script Part 1 of 3
 # # import librararies
-# from cryptography.fernet import Fernet
+
 
 # # Delare function
 
@@ -82,3 +82,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# References
+## OpenAI
+## <https://pypi.org/project/cryptography/>s
