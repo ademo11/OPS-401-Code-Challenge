@@ -31,10 +31,20 @@
 
 from cryptography.fernet import Fernet
 import os
+# Declare a function
+def write_key():
+    # Generate a key and save it into a file
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)
+        
+def load_key():
+    # load the key from the current directory named 'key.key'
+    return open("key.key", "rb").read()
 
-# function to load the key
 
-file_path = 'text.txt'
+
+# file_path = 'text.txt'
 
 def encrypt_file(file_path, key):
     with open(file_path, 'rb') as file:
@@ -63,7 +73,6 @@ def decrypt_string(ciphertext, key):
     print(cleartext.decode())
 
 def main():
-    key = Fernet.generate_key()
     mode = input("Select mode:\n1. Encrypt a file\n2. Decrypt a file\n3. Encrypt a message\n4. Decrypt a message\n")
     if mode == '1':
         file_path = input("Enter filepath to target file: ")
@@ -79,10 +88,16 @@ def main():
         decrypt_string(ciphertext, key)
     else:
         print("Invalid mode selected.")
-
+    
+file_size = os.stat("key.key" ).st_size
+if file_size == 0:
+    write_key()
+    
+key = load_key()   
 if __name__ == "__main__":
     main()
 
-# References
-## OpenAI
-## <https://pypi.org/project/cryptography/>s
+# # References
+# ## OpenAI
+# ## <https://pypi.org/project/cryptography/>
+# ## <https://pypi.org/project/cryptography/>
