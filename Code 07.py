@@ -42,3 +42,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Reference
+## <https://www.pythoncentral.io/recursive-file-and-directory-manipulation-in-python-part-1/>
+## <Python: List Of Files In Directory And Subdirectories>
