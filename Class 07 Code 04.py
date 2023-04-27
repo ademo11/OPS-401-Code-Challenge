@@ -1,3 +1,10 @@
+# !/usr/bin/env python3
+# Script: OPS 401 Class 02 Ops Challenge Solution
+# Author: Ademola
+# Date of latest revision: 25 April 2023
+# Purpose: Ops Challenge: File Encryption Script Part 2 of 3
+# import librararies
+
 import os
 from cryptography.fernet import Fernet
 

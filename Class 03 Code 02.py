@@ -1,8 +1,8 @@
-# !/usr/bin/env python3
-# Script: OPS 401 Class 02 Ops Challenge Solution
-# Author: Ademola
-# Date of latest revision: 19 April 2023
-# Purpose: Ops Challenge: Uptime Sensor Tool Part 2 of 2
+# # !/usr/bin/env python3
+# # Script: OPS 401 Class 02 Ops Challenge Solution
+# # Author: Ademola
+# # Date of latest revision: 19 April 2023
+# # Purpose: Ops Challenge: Uptime Sensor Tool Part 2 of 2
 
 import smtplib
 import datetime, time, os
@@ -31,7 +31,6 @@ def send_upalert():
 def send_downalert():
     
 # function that does the ping test
-
 def ping_test():
     if ((ping_result != last) and (ping_result == up)):
         last = up
