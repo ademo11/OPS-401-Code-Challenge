@@ -12,7 +12,7 @@ from getpass import getpass
 up = "memphis won today"
 down = "Lakers lost today"
 last = 0
-ping_result =0
+ping_result = 0
 email = input("please provide your email adress:")
 password = getpass("please provide your password:")
 ip = input("please provide the ip adress you are trying to monitor:")
@@ -29,13 +29,16 @@ def send_upalert():
     
 #  function that handles the down alert
 def send_downalert():
+    return
     
 # function that does the ping test
 def ping_test():
+    global ping_result
+    global last
     if ((ping_result != last) and (ping_result == up)):
         last = up
         send_upalert()
-    elif ((ping_result !=last) and (ping_result == up)):
+    elif ((ping_result !=last) and (ping_result == down)):
         send_downalert()
         last = down
 

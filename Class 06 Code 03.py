@@ -43,9 +43,6 @@ def load_key():
     return open("key.key", "rb").read()
 
 
-
-# file_path = 'text.txt'
-
 def encrypt_file(file_path, key):
     with open(file_path, 'rb') as file:
         data = file.read()
