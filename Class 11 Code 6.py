@@ -1,8 +1,8 @@
-# # !/usr/bin/env python3
-# # Script: OPS 401 Class 02 Ops Challenge Solution
-# # Author: Ademola
-# # Date of latest revision: 1 May 2023
-# # Purpose: Ops Challenge: Network Security Tool with Scapy Part 1 of 3
+# !/usr/bin/env python3
+# Script: OPS 401 Class 02 Ops Challenge Solution
+# Author: Ademola
+# Date of latest revision: 1 May 2023
+# Purpose: Ops Challenge: Network Security Tool with Scapy Part 1 of 3
 from scapy.all import ICMP, IP, sr1, TCP
 import sys
 
