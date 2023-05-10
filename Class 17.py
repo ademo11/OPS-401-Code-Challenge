@@ -36,4 +36,6 @@ def brute_force_ssh(server_ip, username, word_list_file):
 # brute_force_ssh('192.168.1.1', 'root', 'wordlist.txt')
 
 # Reference
+## <https://null-byte.wonderhowto.com/how-to/sploit-make-ssh-brute-forcer-python-0161689/>
+## <https://www.geeksforgeeks.org/how-to-execute-shell-commands-in-a-remote-machine-using-python-paramiko/>
 ## OpenAI
