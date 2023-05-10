@@ -40,3 +40,7 @@ def brute_force(zip_file_name, password_list_file):
 
 # call the brute_force function with the zip file name and the password list file
 brute_force('secret.zip', 'rockyou.txt')
+
+
+# Reference
+## <https://docs.python.org/3/library/zipfile.html#module-zipfile>
