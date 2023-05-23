@@ -59,3 +59,6 @@ if ping_host(target_ip):
     port_scan(target_ip)
 else:
     logging.error("Host is not responsive.")
+
+# Reference
+## Uses OpenAI to fix bug
