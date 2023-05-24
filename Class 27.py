@@ -1,22 +1,30 @@
 # !/usr/bin/env python3
 # Script: OPS 401 Class 02 Ops Challenge Solution
 # Author: Ademola
-# Date of latest revision: 22 May 2023
-# Purpose: Ops Challenge: Select one of your Python tools created during this class so far that does not have a logging feature. On that tool:
-# Add logging capabilities to your Python tool using the logging library.
-# Experiment with log types. Build in some error handling, then induce some errors. Send log data to a file in the local directory.
-# Confirm your logging feature is working as expected.
+# Date of latest revision: 1 May 2023
+# Purpose: Ops Challenge: Event Logging Tool Part 2 of 3
+
 from scapy.all import *
 import sys
 import logging
+from logging.handlers import TimedRotatingFileHandler
 
 # Set up logging
-logging.basicConfig(filename='scapy_script.log', level=logging.DEBUG,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+log_file = 'scapy_script.log'
+logger = logging.getLogger('ScapyLogger')
+logger.setLevel(logging.DEBUG)
+
+handler = TimedRotatingFileHandler(log_file, when="midnight", interval=1)
+handler.suffix = "%Y%m%d"
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+logger.addHandler(handler)
+
 # Port scanning function
 def port_scan(ip):
     open_ports = []
-    logging.info("Scanning ports...")
+    logger.info("Scanning ports...")
 
     try:
         for port in range(1, 1025):
@@ -29,15 +37,15 @@ def port_scan(ip):
                 open_ports.append(port)
 
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        logger.error(f"An error occurred: {e}")
         return
 
     if open_ports:
-        logging.info("Open ports:")
+        logger.info("Open ports:")
         for port in open_ports:
-            logging.info(f"\tPort {port}")
+            logger.info(f"\tPort {port}")
     else:
-        logging.warning("No open ports found.")
+        logger.warning("No open ports found.")
 
 # Function to perform an ICMP echo request (ping)
 def ping_host(ip):
@@ -45,7 +53,7 @@ def ping_host(ip):
     response = sr1(icmp_request, timeout=1, verbose=0)
 
     if response is None:
-        logging.error("ICMP request failed")
+        logger.error("ICMP request failed")
 
     return response is not None
 
@@ -53,12 +61,12 @@ def ping_host(ip):
 target_ip = input("Enter the target IP address: ")
 
 # Check if the host is responsive
-logging.info("Pinging host...")
+logger.info("Pinging host...")
 if ping_host(target_ip):
-    logging.info("Host is responsive, proceeding with port scan.")
+    logger.info("Host is responsive, proceeding with port scan.")
     port_scan(target_ip)
 else:
-    logging.error("Host is not responsive.")
+    logger.error("Host is not responsive.") 
 
-# Reference
+# References
 ## Uses OpenAI to fix bug
