@@ -1,0 +1,3 @@
+2023-05-24 01:51:18,757 - INFO - Pinging host...
+2023-05-24 01:51:19,773 - ERROR - ICMP request failed
+2023-05-24 01:51:19,774 - ERROR - Host is not responsive.
