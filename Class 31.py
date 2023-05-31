@@ -25,3 +25,6 @@ for dirpath, dirnames, filenames in os.walk(directory):
 # Print out the final statistics
 print(f"\nSearched {files_searched} files.")
 print(f"Found {hits_found} instances of {file_to_search}.")
+
+# References
+## ## Uses OpenAI to fix bug
