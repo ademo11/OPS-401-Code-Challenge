@@ -24,7 +24,7 @@
 # os.environ['API_KEY_VIRUSTOTAL'] = 'your_api_key_here'
 
 # apikey = os.getenv('API_KEY_VIRUSTOTAL') 
-# hash = 'd50157f41fada50cade85284debf33aa642d02f1c01bab543c960861072d4561' 
+# hash = 'd50157f41fada50cade85284debf33aa642d02f1c01bab543c960861072d4561' this is actual virus hash be careful
 
 # query = 'python3 virustotal-search.py -k ' + apikey + ' -m ' + hash
 
